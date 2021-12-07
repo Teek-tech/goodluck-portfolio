@@ -1,0 +1,139 @@
+import styled from 'styled-components'
+
+export const StyledWrapper = styled.div`
+
+`
+
+export const StyledSection = styled.div`
+    display: flex;
+    width: 100%;
+`
+export const StyledMainSection = styled.div`
+    flex: 0.8;
+
+`
+
+export const StyledIntro = styled.div`
+    margin-bottom: 50px;
+
+    h3{
+        font-weight: normal;
+        text-transform: uppercase;
+        color: var(--green);
+        margin-bottom: 10px;
+    }
+
+    p{
+        font-family: var(--font-stack-1);
+        font-size: 0.9em;
+        color: var(--grey-2);
+        line-height: 1.5;
+    }
+`
+
+export const StyledSkillsSection = styled.div`
+    h3{
+        font-weight: normal;
+        text-transform: uppercase;
+        color: var(--green);
+        margin-bottom: 10px;
+    }
+`
+
+export const StyledSkills = styled.div`
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    div:nth-child(2) > div:nth-child(2), div:nth-child(3) > div:nth-child(2){
+        margin-top: 20px;
+    }
+`
+
+export const StyledSkill = styled.div`
+    font-family: var(--font-stack-1);
+
+    h4{
+        font-weight: normal;
+        text-transform: capitalize;
+        color: var(--grey-2);
+        margin-bottom: 5px;
+    }
+
+    p{
+        color: var(--grey-2);
+        font-size: 0.9em;
+        line-height: 1.5;
+    }
+`
+
+export const StyledSidebar = styled.div`
+    padding: 0 10px;
+    flex: 0.2;
+`
+
+export const StyledServices = styled.div`
+
+    h3{
+        font-weight: normal;
+        text-transform: uppercase;
+        color: var(--green);
+        margin-bottom: 10px;
+    }
+
+    li{
+        list-style: none;
+        text-transform: capitalize;
+        font-family: var(--font-stack-1);
+        font-size: 0.9em;
+        margin-bottom: 10px;
+    }
+`
+
+export const StyledOtherServices = styled.div`
+    margin-top: 20px;
+
+    h3{
+        font-weight: normal;
+        text-transform: uppercase;
+        color: var(--green);
+        margin-bottom: 10px;
+    }
+
+    li{
+        list-style: none;
+        text-transform: capitalize;
+        font-family: var(--font-stack-1);
+        font-size: 0.9em;
+        margin-bottom: 10px;
+    }
+`
+
+export const StyledActions = styled.div`
+    font-size: 0.9em;
+    font-family: var(--font-stack-3);
+    text-transform: uppercase;
+    margin-top: 30px;
+    
+
+    > div{
+        display: flex;
+        align-items: center;
+        margin: 10px 0;
+    }
+
+    span{
+        color: var(--green);
+    }
+`
+
+export const StyledIcon = styled.span`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 5px;
+
+    svg{
+        height: 20px;
+        width: 20px;
+    }
+`
