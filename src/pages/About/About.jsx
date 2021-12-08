@@ -11,16 +11,16 @@ const About = () => {
                 <StyledSection>
                     <StyledMainSection>
                         <StyledIntro>
-                            <h3>Introduction</h3>
+                            <h4>Introduction</h4>
                             <p>My country name is Goodluck Junior Allen. <br /> I specialize in solving  complex  problems through design thinking  and with  a wide range of experience.</p>
                         </StyledIntro>
 
                         <StyledSkillsSection>
-                            <h3>skills</h3>
+                            <h4>skills</h4>
                             <StyledSkills>
                                 <div>
                                     <StyledSkill>
-                                        <h4>product design</h4>
+                                        <h5>product design</h5>
                                         <p>
                                             UI Design, Prototyping, User empathy, Interaction design, Mini-interaction design Productt Design Specification, Documentation, Qualitative user research, Product Analysis
                                         </p>
@@ -28,23 +28,23 @@ const About = () => {
                                 </div>
                                 <div>
                                     <StyledSkill>
-                                        <h4>Conceptualization</h4>
+                                        <h5>Conceptualization</h5>
                                         <p>Sketching, Storyboarding, Animation Sprites</p>
                                     </StyledSkill>
 
                                     <StyledSkill>
-                                        <h4>web design</h4>
+                                        <h5>web design</h5>
                                         <p>HTML, CSS, JAVA SCRIPT (I only understand how they work. I dislike coding)</p>
                                     </StyledSkill>
                                 </div>
                                 <div>
                                     <StyledSkill>
-                                        <h4>Communication</h4>
+                                        <h5>Communication</h5>
                                         <p>Fluent in American English and pidgin english</p>
                                     </StyledSkill>
 
                                     <StyledSkill>
-                                        <h4>ideation</h4>
+                                        <h5>ideation</h5>
                                         <p>Brainstorming, Sketching, Mind Mapping, Storyboarding, Bodystorming</p>
                                     </StyledSkill>
                                 </div>
@@ -54,7 +54,7 @@ const About = () => {
                     </StyledMainSection>
                     <StyledSidebar>
                         <StyledServices>
-                            <h3>my services</h3>
+                            <h4>my services</h4>
                             <ul>
                                 <li>UI/UX Design</li>
                                 <li>Branding</li>
@@ -65,7 +65,7 @@ const About = () => {
                         </StyledServices>
 
                         <StyledOtherServices>
-                            <h3>non design services</h3>
+                            <h4>non design services</h4>
                             <ul>
                                 <li>modeling</li>
                             </ul>

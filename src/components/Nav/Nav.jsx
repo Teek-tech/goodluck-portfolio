@@ -1,10 +1,11 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
-import { StyledWrapper, StyledLogo, StyledNav, StyledWheel, StyledPointer } from './styles';
+import { StyledWrapper, StyledLogo, StyledNav, StyledWheel, StyledPointer, StyledOverlay } from './styles';
 
 import logo from '../../assets/icons/logo.svg'
 import avatar from '../../assets/images/1.jpg'
+import resourcesImg from '../../assets/images/resources.png'
 
 const Nav = () => {
 
@@ -15,11 +16,13 @@ const Nav = () => {
     const purple = '#816BFF'
 
     const [rotation, setRotation] = useState(0)
-    const [nav1Color, setNav1color] = useState('')
+    const [nav1Color, setNav1color] = useState(green)
     const [nav2Color, setNav2Color] = useState('')
     const [nav3Color, setNav3Color] = useState('')
     const [pointerColor, setPointerColor] = useState(green)
     const [wheelBorderColor, setWheelBorderColor] = useState()
+    const [switchImage, setSwitchImage] = useState(avatar)
+    const [showOverlay, setShowOverlay] = useState(false)
     
 
     const rotateLeft = () =>{
@@ -29,6 +32,8 @@ const Nav = () => {
         setNav3Color(white)
         setPointerColor(green)
         setWheelBorderColor(green)
+        setSwitchImage(avatar)
+        setShowOverlay(false)
     }
 
     const rotateRight = () =>{
@@ -38,6 +43,8 @@ const Nav = () => {
         setNav1color(white)
         setPointerColor(purple)
         setWheelBorderColor(purple)
+        setSwitchImage(resourcesImg)
+        setShowOverlay(false)
     }
 
     const rotateDown = () =>{
@@ -47,6 +54,7 @@ const Nav = () => {
         setNav1color(white)
         setPointerColor(pink)
         setWheelBorderColor(pink)
+        setShowOverlay(true)
     }
 
 
@@ -63,9 +71,11 @@ const Nav = () => {
                     as={motion.div} 
                     animate={{rotate: rotation}}
                     transition={{duration: 0.6}}
+                    style={{border: `2px solid ${wheelBorderColor}`}}
                 >
                     <StyledPointer style={{borderRight: `40px solid ${pointerColor}`}} ></StyledPointer>
-                    <img style={{border: `2px solid ${wheelBorderColor}`}} src={avatar} alt="user" />
+                    {showOverlay && <StyledOverlay/>}
+                    <img  src={switchImage} alt="user" />
                 </StyledWheel>
             </StyledNav>
         </StyledWrapper>

@@ -7,7 +7,7 @@ export const StyledWrapper = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 30px 0;
+    padding: 20px 0;
 `
 
 export const StyledLogo = styled.div`
@@ -23,7 +23,8 @@ export const StyledNav = styled.nav`
     width: 250px;
     font-family: var(--font-stack-4);
     text-transform: capitalize;
-    font-size: 0.9em;
+    font-size: 0.8em;
+    margin-top: -20px;
     
     a{
         text-decoration: none;
@@ -34,7 +35,7 @@ export const StyledNav = styled.nav`
     a:first-child{
         position: absolute;
         top: 50%;
-        left: -20px;
+        left: -10px;
         transform: translateY(-50%);
         
     }
@@ -42,13 +43,13 @@ export const StyledNav = styled.nav`
     a:nth-child(2){
         position: absolute;
         top: 50%;
-        right: -20px;
+        right: -10px;
         transform: translateY(-50%);
     }
 
     a:nth-child(3){
         position: absolute;
-        bottom: -30px;
+        bottom: -20px;
         left: 50%;
         transform: translate(-50%, -50%);
     }
@@ -56,23 +57,16 @@ export const StyledNav = styled.nav`
 
 export const StyledWheel = styled.div`
     position: relative;
-    height: 60px;
-    width: 60px;
+    height: 50px;
+    width: 50px;
     z-index: 3;
-
-    /* ::before{
-        content: "";
-        
-
-        } */
+    border-radius: 50%;
+    border: 2px solid var(--green);
 
     img{
         height: 100%;
         width: 100%;
         border-radius: 50%;
-        border: 2px solid var(--green);
-
-        
     }
 
 `
@@ -84,8 +78,19 @@ export const StyledPointer = styled.div`
         transform: translateY(-50%);
         width: 0;
         height: 0;
-        border-right: 40px solid var(--green);
-        border-top: 7px solid transparent;
-        border-bottom: 7px solid transparent;
+        border-right: 20px solid var(--green);
+        border-top: 5px solid transparent;
+        border-bottom: 5px solid transparent;
         z-index: -2;
+`
+
+export const StyledOverlay = styled.div`
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(0deg, rgba(255, 63, 109, 0.68), rgba(255, 63, 109, 0.68)), linear-gradient(0deg, rgba(255, 63, 109, 0.52), rgba(255, 63, 109, 0.52)), linear-gradient(0deg, #FF3F6D, #FF3F6D);
+    z-index: 4;
+    border-radius: 50%;
 `

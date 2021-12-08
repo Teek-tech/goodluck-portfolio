@@ -14,9 +14,9 @@ export const StyledMainSection = styled.div`
 `
 
 export const StyledIntro = styled.div`
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 
-    h3{
+    h4{
         font-weight: normal;
         text-transform: uppercase;
         color: var(--green);
@@ -25,14 +25,14 @@ export const StyledIntro = styled.div`
 
     p{
         font-family: var(--font-stack-1);
-        font-size: 0.9em;
+        font-size: 0.8em;
         color: var(--grey-2);
         line-height: 1.5;
     }
 `
 
 export const StyledSkillsSection = styled.div`
-    h3{
+    h4{
         font-weight: normal;
         text-transform: uppercase;
         color: var(--green);
@@ -52,7 +52,8 @@ export const StyledSkills = styled.div`
 export const StyledSkill = styled.div`
     font-family: var(--font-stack-1);
 
-    h4{
+    h5{
+        font-size: 1em;
         font-weight: normal;
         text-transform: capitalize;
         color: var(--grey-2);
@@ -61,7 +62,7 @@ export const StyledSkill = styled.div`
 
     p{
         color: var(--grey-2);
-        font-size: 0.9em;
+        font-size: 0.8em;
         line-height: 1.5;
     }
 `
@@ -73,7 +74,7 @@ export const StyledSidebar = styled.div`
 
 export const StyledServices = styled.div`
 
-    h3{
+    h4{
         font-weight: normal;
         text-transform: uppercase;
         color: var(--green);
@@ -84,7 +85,7 @@ export const StyledServices = styled.div`
         list-style: none;
         text-transform: capitalize;
         font-family: var(--font-stack-1);
-        font-size: 0.9em;
+        font-size: 0.8em;
         margin-bottom: 10px;
     }
 `
@@ -92,7 +93,7 @@ export const StyledServices = styled.div`
 export const StyledOtherServices = styled.div`
     margin-top: 20px;
 
-    h3{
+    h4{
         font-weight: normal;
         text-transform: uppercase;
         color: var(--green);
@@ -103,13 +104,13 @@ export const StyledOtherServices = styled.div`
         list-style: none;
         text-transform: capitalize;
         font-family: var(--font-stack-1);
-        font-size: 0.9em;
+        font-size: 0.8em;
         margin-bottom: 10px;
     }
 `
 
 export const StyledActions = styled.div`
-    font-size: 0.9em;
+    font-size: 0.8em;
     font-family: var(--font-stack-3);
     text-transform: uppercase;
     margin-top: 30px;
