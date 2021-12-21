@@ -1,14 +1,31 @@
-import { BrowserRouter as Router, Routes, Route} from 'react-router-dom'
+import { BrowserRouter} from 'react-router-dom'
 import { Helmet, HelmetProvider } from 'react-helmet-async'
 import { GlobalStyles } from './components/GlobalStyles/GlobalStyles'
 import Nav from './components/Nav/Nav';
-import About from './pages/About/About'
+// import About from './pages/About/About'
+// import Portfolio from './pages/Portfolio/Portfolio';
+// import Resources from './pages/Resources/Resources'
 import Footer from './components/Footer/Footer';
+// import { AnimatePresence } from 'framer-motion';
+import AnimatedRoutes from './components/AnimatedRoutes/AnimatedRoutes';
 
 
 function App() {
+
+
   return (
-    <Router>
+
+    // <BrowserRouter>
+    //   <GlobalStyles/>
+    //   <div className="App">
+    //     <Nav/>
+    //     <AnimatedRoutes/>
+    //     <Footer/>
+    //     </div>
+    // </BrowserRouter>
+
+
+    <BrowserRouter>
       <HelmetProvider>
         <Helmet>
           <link rel="preconnect" href="https://fonts.googleapis.com"/>
@@ -18,13 +35,11 @@ function App() {
         <GlobalStyles/>
         <div className="App">
           <Nav/>
-          <Routes>
-            <Route path="/" element={<About/>}/>
-          </Routes>
+          <AnimatedRoutes/>
           <Footer/>
         </div>
       </HelmetProvider>
-    </Router>
+    </BrowserRouter>
   );
 }
 

@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import { Link } from 'react-router-dom'
+import { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { StyledWrapper, StyledLogo, StyledNav, StyledWheel, StyledPointer, StyledOverlay } from './styles';
 
@@ -57,6 +57,24 @@ const Nav = () => {
         setShowOverlay(true)
     }
 
+    const location = useLocation()
+
+    useEffect(() =>{
+        switch (location.pathname){
+            case '/':
+                rotateLeft()
+                break;
+            case '/portfolio':
+                rotateDown()
+                break;
+            case '/resources':
+                rotateRight()
+                break;
+            default:
+                console.log('ooppss!')
+        }
+    }, [location])
+
 
     return (
         <StyledWrapper>
@@ -65,8 +83,8 @@ const Nav = () => {
             </StyledLogo>
             <StyledNav>
                 <Link to="/" style={{color: nav1Color}} onClick={rotateLeft}>about me</Link>
-                <Link to="#" style={{color: nav2Color}} onClick={rotateRight}>resources</Link>
-                <Link to="#" style={{color: nav3Color}} onClick={rotateDown}>portfolio</Link>
+                <Link to="resources" style={{color: nav2Color}} onClick={rotateRight}>resources</Link>
+                <Link to="portfolio" style={{color: nav3Color}} onClick={rotateDown}>portfolio</Link>
                 <StyledWheel
                     as={motion.div} 
                     animate={{rotate: rotation}}
