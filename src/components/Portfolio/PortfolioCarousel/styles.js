@@ -10,6 +10,7 @@ export const StyledImage = styled.div`
     height: 180px;
     border-radius: 10px;
     position: relative;
+    z-index: 3;
 
     img{
         height: 100%;
@@ -42,4 +43,25 @@ export const StyledOverlay = styled.div`
     width: 100%;
     background: rgba(0,0,0,0.5);
     border-radius: 10px;
+    z-index: 4;
+`
+
+export const StyledLink = styled.div`
+    position: absolute;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: var(--green);
+    border-radius: 10px;
+    /* transition: all .3s ease; */
+    z-index: 5;
+
+    :hover{
+        /* display: flex; */
+        
+    }
 `
