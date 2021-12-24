@@ -9,7 +9,7 @@ import { projects } from './data'
 import 'swiper/swiper.scss'; // core Swiper
 import 'swiper/modules/autoplay/autoplay.scss'; // Autoplay module
 import 'swiper/modules/effect-coverflow/effect-coverflow.scss'; // Coverflow module
-// import { useState } from 'react';
+
 
 const PortfolioCarousel = () => {
 
@@ -31,13 +31,24 @@ const PortfolioCarousel = () => {
                 "slideShadows": false
             }}
             spaceBetween={60}
-            slidesPerView={2.8}
+            slidesPerView={1.3}
             // autoplay={{"delay": 2500, "disableOnInteraction": false}}
             navigation
             loop={true}
             pagination={{ clickable: true }}
             slideToClickedSlide={true}
             scrollbar={{ draggable: true }}
+            breakpoints={{
+
+                700: {
+                    slidesPerView: 1,
+                    spaceBetween: 10
+                },
+                1200: {
+                    slidesPerView: 2.8,
+                    spaceBetween: 60
+                }
+            }}
             >
                 {
                     projects.map(project => (

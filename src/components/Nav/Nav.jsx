@@ -5,7 +5,8 @@ import { StyledWrapper, StyledLogo, StyledNav, StyledWheel, StyledPointer, Style
 
 import logo from '../../assets/icons/logo.svg'
 import avatar from '../../assets/images/1.jpg'
-import resourcesImg from '../../assets/images/resources.png'
+import portfolioImg from '../../assets/images/portfolio.jpg'
+import resourcesImg from '../../assets/images/resources.jpg'
 
 const Nav = () => {
 
@@ -14,6 +15,7 @@ const Nav = () => {
     const green = '#4ABC55'
     const pink = '#FF3F6D'
     const purple = '#816BFF'
+    const red = '#FF1414'
 
     const [rotation, setRotation] = useState(0)
     const [nav1Color, setNav1color] = useState(green)
@@ -50,11 +52,12 @@ const Nav = () => {
     const rotateDown = () =>{
         setRotation(-90)
         setNav2Color(white)
-        setNav3Color(pink)
+        setNav3Color(red)
         setNav1color(white)
         setPointerColor(pink)
         setWheelBorderColor(pink)
         setShowOverlay(true)
+        setSwitchImage(portfolioImg)
     }
 
     const location = useLocation()

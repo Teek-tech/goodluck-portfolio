@@ -90,7 +90,7 @@ export const StyledOverlay = styled.div`
     left: 0;
     height: 100%;
     width: 100%;
-    background: linear-gradient(0deg, rgba(255, 63, 109, 0.68), rgba(255, 63, 109, 0.68)), linear-gradient(0deg, rgba(255, 63, 109, 0.52), rgba(255, 63, 109, 0.52)), linear-gradient(0deg, #FF3F6D, #FF3F6D);
+    background: rgba(255, 63, 109, 0.6);
     z-index: 4;
     border-radius: 50%;
 `

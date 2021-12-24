@@ -5,11 +5,19 @@ export const StyledWrapper = styled.div`
 `
 
 export const StyledSection = styled.div`
-    display: flex;
-    width: 100%;
+    
+
+    @media(min-width: 1200px){
+        display: flex;
+        width: 100%;
+    }
 `
 export const StyledMainSection = styled.div`
-    flex: 0.8;
+    
+
+    @media(min-width: 1200px){
+        flex: 0.8;
+    }
 
 `
 
@@ -41,12 +49,16 @@ export const StyledSkillsSection = styled.div`
 `
 
 export const StyledSkills = styled.div`
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    
 
     div:nth-child(2) > div:nth-child(2), div:nth-child(3) > div:nth-child(2){
         margin-top: 20px;
     }
+
+    @media(min-width: 1200px){
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }   
 `
 
 export const StyledSkill = styled.div`
@@ -68,8 +80,13 @@ export const StyledSkill = styled.div`
 `
 
 export const StyledSidebar = styled.div`
-    padding: 0 10px;
-    flex: 0.2;
+    margin-top: 20px;
+    
+
+    @media(min-width: 1200px){
+        flex: 0.2;
+        padding: 0 10px;
+    }
 `
 
 export const StyledServices = styled.div`
