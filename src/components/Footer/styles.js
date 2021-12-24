@@ -1,0 +1,63 @@
+import styled from 'styled-components'
+
+export const StyledWrapper = styled.div`
+    
+`
+
+export const StyledFooter = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    
+
+    > div{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+
+        > button{
+            background: radial-gradient(139.47% 802.11% at 85.84% 0%, #5445FC 0%, #BA4ABC 100%);
+            outline: none;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-family: var(--font-stack-3);
+            text-transform: capitalize;
+            color: var(--white);
+        }
+    }
+
+`
+
+export const StyledSocialIcons = styled.div`
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    align-items: center;
+    gap: 20px;
+    margin: 20px 0;
+    
+`
+
+export const StyledIcon = styled.div`
+
+    a{
+        text-decoration: none;
+        
+    }
+
+    svg{
+        color: var(--purple-2);
+    }
+`
+
+export const StyledCopyrightText = styled.p`
+    font-family: var(--font-stack-2);
+    text-transform: uppercase;
+    font-size: 0.8em;
+    color: var(--purple-2);
+    border-top: 1px solid var(--grey-3);
+    padding-top: 10px;
+`
