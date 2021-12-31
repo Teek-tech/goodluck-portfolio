@@ -8,6 +8,10 @@ export const StyledWrapper = styled.div`
     justify-content: center;
     align-items: center;
     padding: 20px 0;
+
+    @media(min-width: 1200px){
+        height: 25vh;
+    }
 `
 
 export const StyledLogo = styled.div`
