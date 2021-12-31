@@ -39,7 +39,7 @@ export const StyledNav = styled.nav`
     a:first-child{
         position: absolute;
         top: 50%;
-        left: -10px;
+        left: 0px;
         transform: translateY(-50%);
         
     }
@@ -47,7 +47,7 @@ export const StyledNav = styled.nav`
     a:nth-child(2){
         position: absolute;
         top: 50%;
-        right: -10px;
+        right: 0px;
         transform: translateY(-50%);
     }
 
