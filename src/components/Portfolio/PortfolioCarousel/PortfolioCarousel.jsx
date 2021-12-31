@@ -46,7 +46,11 @@ const PortfolioCarousel = () => {
                 },
                 1200: {
                     slidesPerView: 2.8,
-                    spaceBetween: 60
+                    spaceBetween: 60,
+                    touchRatio: 0,
+                    scrollbar: {
+                        draggable: false
+                    }
                 }
             }}
             >

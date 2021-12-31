@@ -44,6 +44,10 @@ export const GlobalStyles = createGlobalStyle`
     body{
         background: var(--black-2);
         color: var(--white-1);
+        
+        @media(min-width: 1200px){
+            height: 100vh;
+        }
     }
 
     h1,h2,h3,h4,h5,h6{
