@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types'
 import { StyledWrapper } from './styles';
 
-const Container = ({children, margin}) => {
+const Container = ({children, removeMargin}) => {
     return (
-        <StyledWrapper margin={margin}>
+        <StyledWrapper margin={removeMargin}>
             {children}
         </StyledWrapper>
     );
@@ -17,5 +17,9 @@ Container.propTypes = {
         PropTypes.arrayOf(PropTypes.element),
         PropTypes.element.isRequired
     ]),
-    // margin: PropTypes.bool.isRequired
+    removeMargin: PropTypes.bool.isRequired
+}
+
+Container.defaultProps = {
+    removeMargin: false
 }

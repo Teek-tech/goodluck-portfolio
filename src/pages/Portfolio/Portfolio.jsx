@@ -23,7 +23,7 @@ const Portfolio = () => {
     return (
         <AnimatedPage>
             <StyledWrapper>
-                <Container margin={true}>
+                <Container removeMargin={true}>
                     <Tabs selectedTab={activeTab} onChange={handleChange}>
                         <Tab key={1} color="#DE0F0F" label={<IconOne/>} value={1}/>
                         <Tab key={2} color="#DE0F0F" label={<IconTwo/>} value={2}/>

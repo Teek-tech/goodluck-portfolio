@@ -57,9 +57,17 @@ export const StyledSkills = styled.div`
         margin-top: 20px;
     }
 
+    > div:nth-child(2), > div:nth-child(3) {
+        margin-top: 20px;
+    }
+
     @media(min-width: 1200px){
         display: grid;
         grid-template-columns: repeat(3, 1fr);
+
+        > div:nth-child(2), > div:nth-child(3) {
+        margin-top: 0;
+    }
     }   
 `
 
