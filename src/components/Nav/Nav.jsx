@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom'
 import { motion } from 'framer-motion'
-// import useMatchMedia from '../../Hooks/useMatchMedia'
 import { StyledWrapper, StyledDiv, StyledLogo, StyledNav, StyledWheel, StyledPointer, StyledNavTrigger } from './styles';
 
 import logo from '../../assets/icons/logo.svg'
@@ -15,9 +14,6 @@ const Nav = () => {
     const green = '#4ABC55'
     const purple = '#816BFF'
     const red = '#DE0F0F'
-
-    // const isMobileScreen = useMatchMedia('(max-width: 1199.99px)', true)
-
 
     const [rotation, setRotation] = useState(0)
     const [nav1Color, setNav1color] = useState(green)

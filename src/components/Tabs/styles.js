@@ -1,14 +1,24 @@
 import styled from 'styled-components'
 
 export const StyledTab = styled.div`
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: var(--font-stack-1);
+    font-size: 0.8em;
     margin: 0 10px;
-    border-radius: 50%;
-    border: 1px solid ${props => props.active ? props.color : 'transparent'};
     cursor: pointer;
     ${(props) => !props.active && props.inActiveStyle}
+
+    span{
+        display: ${props => props.active ? 'inline-block' : 'none'};
+        height: 3px;
+        width: 3px;
+        background: var(--red);
+        border-radius: 50%;
+        margin-right: 10px;
+    }
     
     :first-child{
         margin-left: 0;
@@ -19,13 +29,7 @@ export const StyledTab = styled.div`
     }
 
     :hover{
-        border: 1px solid ${props => props.color ? props.color : null};
-        /* svg{
-            stroke: none;
-            stroke: ${props => props.color ? '#000' : null};
-            fill: ${props => props.color ? '#000' : null}
-        } */
-
+        opacity: 1;
     }
 `
 

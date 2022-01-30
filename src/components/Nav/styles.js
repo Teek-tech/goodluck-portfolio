@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-// import { motion } from 'framer-motion'
 
 
 export const StyledWrapper = styled.div`
@@ -27,10 +26,6 @@ export const StyledDiv = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
-    @media(max-width: 1199.99px){
-        display: ${props => props.showNavWheel ? 'flex' : 'none'};
-    }
 `
 
 export const StyledLogo = styled.div`
