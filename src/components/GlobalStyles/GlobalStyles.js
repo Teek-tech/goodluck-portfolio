@@ -20,8 +20,10 @@ export const GlobalStyles = createGlobalStyle`
         --font-stack-4: 'texta-bold';
         --green: #4ABC55;
         --pink: #FF3F6D;
+        --red: #DE0F0F;
         --purple: #816BFF;
         --purple-2: #AC4ABC;
+        --purple-3: #DE0F0F;
         --yellow: #EFDA6D;
         --white-1: #FFFFFF;
         --black-1: #000000;

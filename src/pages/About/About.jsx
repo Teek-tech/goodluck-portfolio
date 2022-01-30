@@ -14,7 +14,7 @@ const About = () => {
                         <StyledMainSection>
                             <StyledIntro>
                                 <h4>Introduction</h4>
-                                <p>My country name is Goodluck Junior Allen. <br /> I specialize in solving  complex  problems through design thinking  and with  a wide range of experience.</p>
+                                <p>My country name is <span>Goodluck Junior Allen.</span> <br /> I specialize in solving  complex  problems through design thinking  and with  a wide range of experience.</p>
                             </StyledIntro>
 
                             <StyledSkillsSection>

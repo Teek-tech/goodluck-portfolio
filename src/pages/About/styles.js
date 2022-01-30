@@ -38,6 +38,10 @@ export const StyledIntro = styled.div`
         font-size: 0.8em;
         color: var(--grey-2);
         line-height: 1.5;
+
+        span{
+            color: var(--purple);
+        }
     }
 `
 

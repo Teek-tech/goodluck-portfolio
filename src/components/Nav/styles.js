@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-// import { motion } from 'framer-motion'
 
 
 export const StyledWrapper = styled.div`
@@ -9,9 +8,24 @@ export const StyledWrapper = styled.div`
     align-items: center;
     padding: 20px 0;
 
+    @media(max-width: 1199.99px){
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background: var(--black-2);
+    }
+
     @media(min-width: 1200px){
         height: 25vh;
     }
+`
+
+export const StyledDiv = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 `
 
 export const StyledLogo = styled.div`
@@ -61,6 +75,7 @@ export const StyledNav = styled.nav`
 
 export const StyledWheel = styled.div`
     position: relative;
+    padding: 2px;
     height: 50px;
     width: 50px;
     z-index: 3;
@@ -75,17 +90,27 @@ export const StyledWheel = styled.div`
 
 `
 
+// export const StyledPointer = styled.div`
+//         position: absolute;
+//         top: 50%;
+//         left: -30px;
+//         transform: translateY(-50%);
+//         width: 0;
+//         height: 0;
+//         border-right: 20px solid var(--green);
+//         border-top: 5px solid transparent;
+//         border-bottom: 5px solid transparent;
+//         z-index: -2;
+// `
+
 export const StyledPointer = styled.div`
-        position: absolute;
-        top: 50%;
-        left: -30px;
-        transform: translateY(-50%);
-        width: 0;
-        height: 0;
-        border-right: 20px solid var(--green);
-        border-top: 5px solid transparent;
-        border-bottom: 5px solid transparent;
-        z-index: -2;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -20px;
+    height: 5px;
+    width: 5px;
+    border-radius: 50%;
 `
 
 export const StyledOverlay = styled.div`
@@ -97,4 +122,17 @@ export const StyledOverlay = styled.div`
     background: rgba(255, 63, 109, 0.6);
     z-index: 4;
     border-radius: 50%;
+`
+
+export const StyledNavTrigger = styled.div`
+    display: ${props => props.showNavWheel ? 'none' : 'block'}
+    height: 50px;
+    width: 50px;
+    background: var(--yellow);
+    border-radius: 50%;
+    cursor: pointer;
+
+    @media(min-width: 1200px){
+        display: none;
+    }
 `

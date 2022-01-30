@@ -2,11 +2,7 @@ import { BrowserRouter} from 'react-router-dom'
 import { Helmet, HelmetProvider } from 'react-helmet-async'
 import { GlobalStyles } from './components/GlobalStyles/GlobalStyles'
 import Nav from './components/Nav/Nav';
-// import About from './pages/About/About'
-// import Portfolio from './pages/Portfolio/Portfolio';
-// import Resources from './pages/Resources/Resources'
 import Footer from './components/Footer/Footer';
-// import { AnimatePresence } from 'framer-motion';
 import AnimatedRoutes from './components/AnimatedRoutes/AnimatedRoutes';
 
 
@@ -14,17 +10,6 @@ function App() {
 
 
   return (
-
-    // <BrowserRouter>
-    //   <GlobalStyles/>
-    //   <div className="App">
-    //     <Nav/>
-    //     <AnimatedRoutes/>
-    //     <Footer/>
-    //     </div>
-    // </BrowserRouter>
-
-
     <BrowserRouter>
       <HelmetProvider>
         <Helmet>

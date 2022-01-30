@@ -10,6 +10,7 @@ export const Tab = ({label, color, active, onClick}) => {
             onClick={onClick}
             inActiveStyle={inActiveTab}
         >
+            <span></span>
             {label}
         </StyledTab>
 
