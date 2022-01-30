@@ -1,21 +1,23 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom'
 import { motion } from 'framer-motion'
-import { StyledWrapper, StyledLogo, StyledNav, StyledWheel, StyledPointer, StyledOverlay } from './styles';
+// import useMatchMedia from '../../Hooks/useMatchMedia'
+import { StyledWrapper, StyledDiv, StyledLogo, StyledNav, StyledWheel, StyledPointer, StyledNavTrigger } from './styles';
 
 import logo from '../../assets/icons/logo.svg'
-import avatar from '../../assets/images/1.jpg'
-import portfolioImg from '../../assets/images/portfolio.jpg'
+import avatar from '../../assets/images/avatar.png'
+import portfolioImg from '../../assets/images/portfolio.png'
 import resourcesImg from '../../assets/images/resources.jpg'
 
 const Nav = () => {
 
-
     const white = '#FFFFFF'
     const green = '#4ABC55'
-    const pink = '#FF3F6D'
     const purple = '#816BFF'
-    const red = '#FF1414'
+    const red = '#DE0F0F'
+
+    // const isMobileScreen = useMatchMedia('(max-width: 1199.99px)', true)
+
 
     const [rotation, setRotation] = useState(0)
     const [nav1Color, setNav1color] = useState(green)
@@ -24,7 +26,7 @@ const Nav = () => {
     const [pointerColor, setPointerColor] = useState(green)
     const [wheelBorderColor, setWheelBorderColor] = useState()
     const [switchImage, setSwitchImage] = useState(avatar)
-    const [showOverlay, setShowOverlay] = useState(false)
+    const [showNavWheel, setShowNavWheel] = useState(false)
     
 
     const rotateLeft = () =>{
@@ -35,7 +37,6 @@ const Nav = () => {
         setPointerColor(green)
         setWheelBorderColor(green)
         setSwitchImage(avatar)
-        setShowOverlay(false)
     }
 
     const rotateRight = () =>{
@@ -46,7 +47,6 @@ const Nav = () => {
         setPointerColor(purple)
         setWheelBorderColor(purple)
         setSwitchImage(resourcesImg)
-        setShowOverlay(false)
     }
 
     const rotateDown = () =>{
@@ -54,13 +54,16 @@ const Nav = () => {
         setNav2Color(white)
         setNav3Color(red)
         setNav1color(white)
-        setPointerColor(pink)
-        setWheelBorderColor(pink)
-        setShowOverlay(true)
+        setPointerColor(red)
+        setWheelBorderColor(red)
         setSwitchImage(portfolioImg)
     }
 
     const location = useLocation()
+
+    const handleClick = () =>{
+        setShowNavWheel(true)
+    }
 
     useEffect(() =>{
         switch (location.pathname){
@@ -81,24 +84,26 @@ const Nav = () => {
 
     return (
         <StyledWrapper>
-            <StyledLogo>
-                <img src={logo} alt="june" />
-            </StyledLogo>
-            <StyledNav>
-                <Link to="/" style={{color: nav1Color}} onClick={rotateLeft}>about me</Link>
-                <Link to="resources" style={{color: nav2Color}} onClick={rotateRight}>resources</Link>
-                <Link to="portfolio" style={{color: nav3Color}} onClick={rotateDown}>portfolio</Link>
-                <StyledWheel
-                    as={motion.div} 
-                    animate={{rotate: rotation}}
-                    transition={{duration: 0.6}}
-                    style={{border: `2px solid ${wheelBorderColor}`}}
-                >
-                    <StyledPointer style={{borderRight: `40px solid ${pointerColor}`}} ></StyledPointer>
-                    {showOverlay && <StyledOverlay/>}
-                    <img  src={switchImage} alt="user" />
-                </StyledWheel>
-            </StyledNav>
+            <StyledDiv showNavWheel={showNavWheel}>
+                <StyledLogo>
+                    <img src={logo} alt="june" />
+                </StyledLogo>
+                <StyledNav>
+                    <Link to="/" style={{color: nav1Color}} onClick={rotateLeft}>about me</Link>
+                    <Link to="resources" style={{color: nav2Color}} onClick={rotateRight}>resources</Link>
+                    <Link to="portfolio" style={{color: nav3Color}} onClick={rotateDown}>portfolio</Link>
+                    <StyledWheel
+                        as={motion.div} 
+                        animate={{rotate: rotation}}
+                        transition={{duration: 0.6}}
+                        style={{border: `2px solid ${wheelBorderColor}`}}
+                    >
+                        <StyledPointer style={{background: `${pointerColor}`}} ></StyledPointer>
+                        <img  src={switchImage} alt="user" />
+                    </StyledWheel>
+                </StyledNav>
+            </StyledDiv>
+            <StyledNavTrigger onClick={handleClick}/>
         </StyledWrapper>
     );
 }
