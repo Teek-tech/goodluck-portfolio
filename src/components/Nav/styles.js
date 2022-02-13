@@ -8,13 +8,13 @@ export const StyledWrapper = styled.div`
     align-items: center;
     padding: 20px 0;
 
-    @media(max-width: 1199.99px){
+    /* @media(max-width: 1199.99px){
         position: fixed;
         top: 0;
         left: 0;
         width: 100%;
         background: var(--black-2);
-    }
+    } */
 
     @media(min-width: 1200px){
         height: 25vh;

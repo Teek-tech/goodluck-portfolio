@@ -25,7 +25,12 @@ export default AnimatedPage;
 
 
 const StyledDiv = styled.div`
-    @media(max-width: 1199.99px){
+
+    /* /* @media(max-width: 800px){
         margin-top: 40%;
-    }
+    } */
+
+    /* @media(max-width: 1199.99px){
+        margin-top: 50px;;
+    } */
 `

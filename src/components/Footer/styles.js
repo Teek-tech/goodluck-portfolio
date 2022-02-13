@@ -3,6 +3,7 @@ import styled from 'styled-components'
 export const StyledWrapper = styled.div`
     position: relative;
     bottom: 0;
+    width: 100%;
 
     @media(min-width: 1200px){
         height: 15vh;
